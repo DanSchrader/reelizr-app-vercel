@@ -1,10 +1,11 @@
-import Container from '@mui/material/Container';
-import { Typography } from '@mui/material';
+import { Typography, Box } from '@mui/material';
+
 
 export default function Home() {
   return (
-    <main>
-      <Typography variant='h1'>Hello, World!</Typography>
-    </main>
+    <Box component="main">
+      <Typography component='h1' variant='h6' align='center'>Video Marketing</Typography>
+      <Typography align='center'>There's nothing that can't be reeliz'd.</Typography>
+    </Box>
   );
 }
