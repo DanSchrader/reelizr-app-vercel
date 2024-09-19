@@ -1,11 +1,18 @@
-import { Typography, Box } from '@mui/material';
+import { Typography, Box, Container } from '@mui/material';
+import Image from 'next/image';
 
 
 export default function Home() {
   return (
     <Box component="main">
-      <Typography component='h1' variant='h6' align='center'>Video Marketing</Typography>
-      <Typography align='center'>There's nothing that can't be reeliz'd.</Typography>
+      <Container>
+        <Box display="flex" justifyContent="center">
+          <Image src="/images/logo-outlines.svg" alt="Reelizr-Logo Outlines" width={400} height={400}/>
+        </Box>
+        <Box display="flex" justifyContent="center">
+          <Image src="/images/video-produktion.svg" alt="Reelizr-Logo Outlines" width={400} height={400}/>
+        </Box>
+      </Container>
     </Box>
   );
 }
