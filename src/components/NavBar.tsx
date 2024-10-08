@@ -14,18 +14,8 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
+import { navLinks } from './NavLinks';
 import Logo from '../components/Logo';
-
-type Page = {
-  name: string;
-  href: string;
-  key: string;
-};
-
-const pages: Page[] = [
-  { name: 'Services', href: '/services', key: 'services' },
-  { name: 'About Us', href: '/about-us', key: 'about-us' },
-  { name: 'Contact', href: '/contact', key: 'contact' },];
 
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
@@ -52,30 +42,14 @@ function ResponsiveAppBar() {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Box sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}>
+          <Box sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, pb: 0.5 }}>
             <Logo 
-              src="/images/reelizr-logo.png"
+              src="/images/reelizr-logo-400.svg"
               alt="Reelizr-Logo"
-              width={40}
-              height={40}
+              width={100}
+              height={25}
               />
           </Box>
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontWeight: 700,
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            Reelizr
-          </Typography>
-
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
@@ -105,45 +79,31 @@ function ResponsiveAppBar() {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page, key) => (
-                <MenuItem key={key} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page.name}</Typography>
+              {navLinks.map((navLink) => (
+                <MenuItem key={navLink.key} onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">{navLink.name}</Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
-          <Box sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }}>
-            <Logo 
-              src="/images/reelizr-logo.png"
-              alt="Reelizr-Logo"
-              width={40}
-              height={40}
-              />
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, mr: 1, pb: 0.5 }}>
+            <Link href="/" passHref>
+              <Logo 
+                  src="/images/reelizr-logo-400.svg"
+                  alt="Reelizr-Logo"
+                  width={100}
+                  height={25}
+                  />
+            </Link>
           </Box>
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontWeight: 700,
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            Reelizr
-          </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Link key={page.key} href={page.href} passHref>
+            {navLinks.map((navLink) => (
+              <Link key={navLink.key} href={navLink.href} passHref>
                 <Button
                   onClick={handleCloseNavMenu}
                   sx={{ my: 2, color: 'white', display: 'block' }}
                 >
-                  {page.name}
+                  {navLink.name}
                 </Button>
             </Link>
             ))}
