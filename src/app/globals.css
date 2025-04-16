@@ -1,7 +1,105 @@
+/* Roboto Regular */
+
+@font-face {
+  font-family: 'Roboto Regular';
+  src: url('/fonts/roboto/roboto-regular.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto Black';
+  src: url('/fonts/roboto/roboto-black.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto ExtraBold';
+  src: url('/fonts/roboto/roboto-extrabold.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto Bold';
+  src: url('/fonts/roboto/roboto-bold.ttf');
+}
+
+/* Roboto Italic*/
+
+@font-face {
+  font-family: 'Roboto Italic';
+  src: url('/fonts/roboto/roboto-italic.ttf');
+}
+
+/* Ostrich Sans */
+
+@font-face {
+	font-family: 'Ostrich Sans Black';
+	src: url('/fonts/ostrich-sans/ostrich-sans-black.eot');
+	src: local('☺'), url('/fonts/ostrich-sans/ostrich-sans-black.woff') format('woff'), url('/fonts/ostrich-sans/ostrich-sans-black.ttf') format('truetype'), url('/fonts/ostrich-sans/ostrich-sans-black.svg') format('svg');
+	font-weight: 900;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Ostrich Sans Bold';
+	src: url('/fonts/ostrich-sans/ostrich-sans-bold.eot');
+	src: local('☺'), url('/fonts/ostrich-sans/ostrich-sans-bold.woff') format('woff'), url('/fonts/ostrich-sans/ostrich-sans-bold.ttf') format('truetype'), url('/fonts/ostrich-sans/ostrich-sans-bold.svg') format('svg');
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Ostrich Sans Regular';
+	src: url('/fonts/ostrich-sans/ostrich-sans-regular.eot');
+	src: local('☺'), url('/fonts/ostrich-sans/ostrich-sans-regular.woff') format('woff'), url('/fonts/ostrich-sans/ostrich-sans-regular.ttf') format('truetype'), url('/fonts/ostrich-sans/ostrich-sans-regular.svg') format('svg');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Ostrich Sans Light';
+	src: url('/fonts/ostrich-sans/ostrich-sans-light.eot');
+	src: local('☺'), url('/fonts/ostrich-sans/ostrich-sans-light.woff') format('woff'), url('/fonts/ostrich-sans/ostrich-sans-light.ttf') format('truetype'), url('/fonts/ostrich-sans/ostrich-sans-light.svg') format('svg');
+	font-weight: 300;
+	font-style: normal;
+}
+
+/* Ostrich Sans Dashed */
+
+@font-face {
+	font-family: 'Ostrich Sans Dashed';
+	src: url('/fonts/ostrich-sans/ostrich-sans-dashed.eot');
+	src: local('☺'), url('/fonts/ostrich-sans/ostrich-sans-dashed.woff') format('woff'), url('/fonts/ostrich-sans/ostrich-sans-dashed.ttf') format('truetype'), url('/fonts/ostrich-sans/ostrich-sans-dashed.svg') format('svg');
+	font-weight: 500;
+	font-style: normal;
+}
+
+/* Ostrich Sans Rounded */
+
+@font-face {
+	font-family: 'Ostrich Sans Rounded';
+	src: url('/fonts/ostrich-sans/ostrich-sans-rounded.eot');
+	src: local('☺'), url('/fonts/ostrich-sans/ostrich-sans-rounded.woff') format('woff'), url('/fonts/ostrich-sans/ostrich-sans-rounded.ttf') format('truetype'), url('/fonts/ostrich-sans/ostrich-sans-rounded.svg') format('svg');
+	font-weight: 500;
+	font-style: normal;
+}
+
+/* Ostrich Sans Inline */
+
+@font-face {
+	font-family: 'Ostrich Sans Inline Regular';
+	src: url('/fonts/ostrich-sans/ostrich-sans-inline-regular.eot');
+	src: local('☺'), url('/fonts/ostrich-sans/ostrich-sans-inline-regular.woff') format('woff'), url('/fonts/ostrich-sans/ostrich-sans-inline-regular.ttf') format('truetype'), url('/fonts/ostrich-sans/ostrich-sans-inline-regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Ostrich Sans Inline Italic';
+	src: url('/fonts/ostrich-sans/ostrich-sans-inline-italic.eot');
+	src: local('☺'), url('/fonts/ostrich-sans/ostrich-sans-inline-italic.woff') format('woff'), url('/fonts/ostrich-sans/ostrich-sans-inline-italic.ttf') format('truetype'), url('/fonts/ostrich-sans/ostrich-sans-inline-italic.svg') format('svg');
+	font-weight: normal;
+	font-style: italic;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 html,

@@ -50,7 +50,6 @@ function ResponsiveAppBar() {
               />
           </Box>
           <Typography
-            variant="h6"
             noWrap
             component="a"
             href="#app-bar-with-responsive-menu"
@@ -60,6 +59,8 @@ function ResponsiveAppBar() {
               fontWeight: 700,
               color: 'inherit',
               textDecoration: 'none',
+              fontFamily: 'Roboto ExtraBold',
+              fontSize: '1.5rem',
             }}
           >
             Reelizr
