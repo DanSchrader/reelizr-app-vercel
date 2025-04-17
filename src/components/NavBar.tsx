@@ -135,7 +135,7 @@ function ResponsiveAppBar() {
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
                 <Link href={page.href}>
-                {page.name}
+                  {page.name}
                 </Link>
               </Button>
             ))}
