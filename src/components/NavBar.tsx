@@ -42,30 +42,18 @@ function ResponsiveAppBar() {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Box sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}>
-            <Logo 
-              src="/images/reelizr-logo.png"
-              alt="Reelizr-Logo"
-              width={40}
-              height={40}
-              />
+          <Box sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}>	
+            <Link href="/">
+              <Box alignItems='center' display='flex'>
+                <Logo 
+                  src="/images/reelizr-text-logo.svg"
+                  alt="Reelizr-Logo"
+                  width={140}
+                  height={40}
+                  />
+              </Box>
+            </Link>
           </Box>
-          <Typography
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontWeight: 700,
-              color: 'inherit',
-              textDecoration: 'none',
-              fontFamily: 'Roboto ExtraBold',
-              fontSize: '1.5rem',
-            }}
-          >
-            Reelizr
-          </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -98,35 +86,26 @@ function ResponsiveAppBar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page.key} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page.name}</Typography>
+                  <Link href={page.href}>
+                    <Typography textAlign="center">{page.name}</Typography>
+                  </Link>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
-          <Box sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }}>
-            <Logo 
-              src="/images/reelizr-logo.png"
-              alt="Reelizr-Logo"
-              width={40}
-              height={40}
-              />
+          <Box sx={{ display: { xs: 'flex', md: 'none' }, mr: 1, flexGrow: 1 }}>
+          <Link href="/">
+              <Box alignItems='center' display='flex'>
+                <Logo 
+                  src="/images/reelizr-text-logo.svg"
+                  alt="Reelizr-Logo"
+                  width={140}
+                  height={40}
+                  />
+              </Box>
+            </Link>
           </Box>
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontWeight: 700,
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            Reelizr
-          </Typography>
+          
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button

@@ -43,64 +43,83 @@ export const themeOptions: ThemeOptions = {
     fontFamily: "'Ostrich Sans Regular', 'Ostrich Sans Black', 'Ostrich Sans Bold', 'Ostrich Sans Light', 'Ostrich Sans Dashed', 'Ostrich Sans Rounded', 'Ostrich Sans Inline Regular', 'Ostrich Sans Inline Italic'",
     h1: {
       fontFamily: 'Ostrich Sans Bold',
-      fontSize: '1.8rem',
+      fontSize: '2.8rem',
       '@media (min-width:600px)': {
         fontSize: '2rem'
       },
       [baseTheme.breakpoints.up('md')]: {
-        fontSize: '2.8rem',
+        fontSize: '2.5rem',
       },
     },
     h2: {
       fontFamily: 'Ostrich Sans Black',
-      fontSize: '1.6rem',
+      fontSize: '2.8rem',
       '@media (min-width:600px)': {
-        fontSize: '1.8rem'
+        fontSize: '2rem'
       },
       [baseTheme.breakpoints.up('md')]: {
-        fontSize: '2.3rem',
+        fontSize: '2.5rem',
       },
     },
     h3: {
       fontFamily: 'Ostrich Sans Dashed',
-      fontSize: '1.6rem',
+      fontSize: '2.8rem',
       '@media (min-width:600px)': {
-        fontSize: '1.8rem'
+        fontSize: '2rem'
       },
       [baseTheme.breakpoints.up('md')]: {
-        fontSize: '2.3rem',
+        fontSize: '2.5rem',
       },
     },
     h4: {
       fontFamily: 'Roboto Black',
-      fontSize: '1.6rem',
+      fontSize: '2.8rem',
       '@media (min-width:600px)': {
-        fontSize: '1.8rem'
+        fontSize: '2rem'
       },
       [baseTheme.breakpoints.up('md')]: {
-        fontSize: '2.3rem',
+        fontSize: '2.5rem',
       },
     },
     h5: {
       fontFamily: 'Roboto ExtraBold',
-      fontSize: '1.6rem',
+      fontSize: '2.8rem',
       '@media (min-width:600px)': {
-        fontSize: '1.8rem'
+        fontSize: '2rem'
       },
       [baseTheme.breakpoints.up('md')]: {
-        fontSize: '2.3rem',
+        fontSize: '2.5rem',
       },
     },
     h6: {
       fontFamily: 'Roboto Bold',
-      fontSize: '1.6rem',
+      fontSize: '2.8rem',
       '@media (min-width:600px)': {
-        fontSize: '1.8rem'
+        fontSize: '2rem'
       },
       [baseTheme.breakpoints.up('md')]: {
-        fontSize: '2.3rem',
+        fontSize: '2.5rem',
       },
-    }
+    },
+    subtitle1: {
+      fontFamily: 'Roboto Medium'
+    },
+    subtitle2: {
+      fontFamily: 'Roboto Medium'
+    },
+    body1: {
+      fontFamily: 'Roboto Regular',
+      fontSize: '1rem',
+      '@media (min-width:600px)': {
+        fontSize: '1.2rem'
+      },
+      [baseTheme.breakpoints.up('md')]: {
+        fontSize: '1.5rem',
+      },
+    },
+    body2: {
+      fontFamily: 'Roboto Light'
+    }    
   },
 };
 
