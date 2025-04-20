@@ -25,8 +25,8 @@ export const themeOptions: ThemeOptions = {
   },
   palette: {
     text: {
-      primary: '#fcfcfc',  
-      secondary: '#0c0c0c',
+      primary: '#fefbe4',  
+      secondary: '#23b9c0',
     },
     background: {
       default: '#0c0c0c',
@@ -36,24 +36,25 @@ export const themeOptions: ThemeOptions = {
       main: '#0c0c0c',
     },
     secondary: {
-      main: '#fcfcfc',
+      main: '#0c0c0c',
     },
   },
   typography: {
     fontFamily: "'Ostrich Sans Regular', 'Ostrich Sans Black', 'Ostrich Sans Bold', 'Ostrich Sans Light', 'Ostrich Sans Dashed', 'Ostrich Sans Rounded', 'Ostrich Sans Inline Regular', 'Ostrich Sans Inline Italic'",
     h1: {
-      fontFamily: 'Ostrich Sans Bold',
-      fontSize: '2.8rem',
+      fontFamily: 'Roboto Black',
+      fontSize: '2rem',
       '@media (min-width:600px)': {
-        fontSize: '2rem'
+        fontSize: '3rem'
       },
       [baseTheme.breakpoints.up('md')]: {
-        fontSize: '2.5rem',
+        fontSize: '4rem',
       },
     },
     h2: {
-      fontFamily: 'Ostrich Sans Black',
-      fontSize: '2.8rem',
+      fontFamily: 'Roboto ExtraBold',
+      color: '#23b9c0',
+      fontSize: '1.5rem',
       '@media (min-width:600px)': {
         fontSize: '2rem'
       },
@@ -62,17 +63,17 @@ export const themeOptions: ThemeOptions = {
       },
     },
     h3: {
-      fontFamily: 'Ostrich Sans Dashed',
-      fontSize: '2.8rem',
+      fontFamily: 'Roboto Bold',
+      fontSize: '1rem',
       '@media (min-width:600px)': {
-        fontSize: '2rem'
+        fontSize: '1.5rem'
       },
       [baseTheme.breakpoints.up('md')]: {
-        fontSize: '2.5rem',
+        fontSize: '2rem',
       },
     },
     h4: {
-      fontFamily: 'Roboto Black',
+      fontFamily: 'Ostrich Sans Rounded',
       fontSize: '2.8rem',
       '@media (min-width:600px)': {
         fontSize: '2rem'
@@ -82,7 +83,7 @@ export const themeOptions: ThemeOptions = {
       },
     },
     h5: {
-      fontFamily: 'Roboto ExtraBold',
+      fontFamily: 'Ostrich Sans Black',
       fontSize: '2.8rem',
       '@media (min-width:600px)': {
         fontSize: '2rem'
@@ -92,8 +93,20 @@ export const themeOptions: ThemeOptions = {
       },
     },
     h6: {
-      fontFamily: 'Roboto Bold',
-      fontSize: '2.8rem',
+      fontFamily: 'Ostrich Sans Dashed',
+      color: '#9943A6',
+      fontSize: '4rem',
+      '@media (min-width:600px)': {
+        fontSize: '6rem'
+      },
+      [baseTheme.breakpoints.up('md')]: {
+        fontSize: '8rem',
+      },
+    },
+    subtitle1: {
+      fontFamily: 'Ostrich Sans Bold',
+      color: '#23b9c0',
+      fontSize: '1.5rem',
       '@media (min-width:600px)': {
         fontSize: '2rem'
       },
@@ -101,11 +114,16 @@ export const themeOptions: ThemeOptions = {
         fontSize: '2.5rem',
       },
     },
-    subtitle1: {
-      fontFamily: 'Roboto Medium'
-    },
     subtitle2: {
-      fontFamily: 'Roboto Medium'
+      fontFamily: 'Ostrich Sans Inline Regular',
+      color: '#9943a6',
+      fontSize: '1.5rem',
+      '@media (min-width:600px)': {
+        fontSize: '2rem'
+      },
+      [baseTheme.breakpoints.up('md')]: {
+        fontSize: '2.5rem',
+      },
     },
     body1: {
       fontFamily: 'Roboto Regular',
@@ -118,8 +136,25 @@ export const themeOptions: ThemeOptions = {
       },
     },
     body2: {
-      fontFamily: 'Roboto Light'
-    }    
+      fontFamily: 'Ostrich Sans Regular',
+      fontSize: '1rem',
+      '@media (min-width:600px)': {
+        fontSize: '1.2rem'
+      },
+      [baseTheme.breakpoints.up('md')]: {
+        fontSize: '1.5rem',
+      },
+    },
+    button: {
+      fontFamily: 'Roboto Bold',
+      fontSize: '1rem',
+      '@media (min-width:600px)': {
+        fontSize: '1rem'
+      },
+      [baseTheme.breakpoints.up('md')]: {
+        fontSize: '1rem',
+      },
+    },    
   },
 };
 

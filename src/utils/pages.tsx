@@ -1,6 +1,6 @@
 const pages = [
-  { name: 'Products', key: 'products', href: '/products' },
-  { name: 'Pricing', key: 'pricing', href: '/pricing' },
+  { name: 'Services', key: 'services', href: '/services' },
+  { name: 'About us', key: 'about-us', href: '/about-us' },
   { name: 'Blog', key: 'blog', href: '/blog' },
 ]
 

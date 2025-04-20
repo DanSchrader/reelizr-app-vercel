@@ -40,7 +40,7 @@ function ResponsiveAppBar() {
 
   return (
     <AppBar position="static">
-      <Container maxWidth="xl">
+      <Container maxWidth='lg'>
         <Toolbar disableGutters>
           <Box sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}>	
             <Link href="/">
@@ -87,13 +87,16 @@ function ResponsiveAppBar() {
               {pages.map((page) => (
                 <MenuItem key={page.key} onClick={handleCloseNavMenu}>
                   <Link href={page.href}>
-                    <Typography textAlign="center">{page.name}</Typography>
+                    <Typography textAlign='center' variant='button'>{page.name}</Typography>
                   </Link>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
-          <Box sx={{ display: { xs: 'flex', md: 'none' }, mr: 1, flexGrow: 1 }}>
+
+          {/* Logo for mobile view - Change flexGrow to 1 if settings menu is needed */}
+
+          <Box sx={{ display: { xs: 'flex', md: 'none' }, mr: 1, flexGrow: 0 }}>
           <Link href="/">
               <Box alignItems='center' display='flex'>
                 <Logo 
@@ -111,7 +114,7 @@ function ResponsiveAppBar() {
               <Button
                 key={page.key}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ my: 2, display: 'block', color: '#fefbe4' }}
               >
                 <Link href={page.href}>
                   {page.name}
@@ -120,7 +123,9 @@ function ResponsiveAppBar() {
             ))}
           </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
+          {/* Settings menu - Uncomment if needed -> Change Logo for mobile view flexGrow to 1 */}
+
+          {/* <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
@@ -148,7 +153,8 @@ function ResponsiveAppBar() {
                 </MenuItem>
               ))}
             </Menu>
-          </Box>
+          </Box> */}
+
         </Toolbar>
       </Container>
     </AppBar>
