@@ -40,9 +40,9 @@ function ResponsiveAppBar() {
 
   return (
     <AppBar position='fixed' color='inherit'>
-      <Container maxWidth='lg'>
+      <Container maxWidth="md">
         <Toolbar disableGutters>
-          <Box sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}>	
+          <Box sx={{ display: { xs: 'none', sm: 'flex' }, mr: 1 }}>	
             <Link href="/">
               <Box alignItems='center' display='flex'>
                 <Logo 
@@ -55,7 +55,7 @@ function ResponsiveAppBar() {
             </Link>
           </Box>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', sm: 'none' } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -81,7 +81,7 @@ function ResponsiveAppBar() {
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: 'block', md: 'none' },
+                display: { xs: 'block', sm: 'none' },
               }}
             >
               {pages.map((page) => (
@@ -96,7 +96,7 @@ function ResponsiveAppBar() {
 
           {/* Logo for mobile view - Change flexGrow to 1 if settings menu is needed */}
 
-          <Box sx={{ display: { xs: 'flex', md: 'none' }, mr: 1, flexGrow: 0 }}>
+          <Box sx={{ display: { xs: 'flex', sm: 'none' }, mr: 1, flexGrow: 0 }}>
           <Link href="/">
               <Box alignItems='center' display='flex'>
                 <Logo 
@@ -109,7 +109,7 @@ function ResponsiveAppBar() {
             </Link>
           </Box>
           
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' } }}>
             {pages.map((page) => (
               <Button
                 key={page.key}

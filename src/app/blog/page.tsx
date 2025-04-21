@@ -2,7 +2,7 @@ import { Box, Typography, Container } from '@mui/material';
 
 export default function Blog() {
   return (
-      <Container component="main" maxWidth='lg' sx={{ py: 10 }}>
+      <Container component="main" maxWidth='md' sx={{ py: 10 }}>
         <Typography component='h1' variant='h1'>Blog - This is a h1</Typography>
         <Typography>Welcome to the blog page!</Typography>
         <Typography component='h2' variant='h2'>This is a h2</Typography>

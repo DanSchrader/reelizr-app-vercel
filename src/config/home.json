@@ -1,0 +1,20 @@
+{
+    "heroSection": {
+        "title": "Reelizr",
+        "subtitle": "Video-Branding, das abhebt",
+        "heading": "Business Video Production",
+        "description": "Wir produzieren hochwertige Business-Videos, die Ihre Marken-Reputation stärken und Ihre Glaubwürdigkeit unterstreichen.\n\nWebinare, Business Talks, Video-Podcasts: Unser Team verwandelt Ihr Fachwissen in wertvollen Content, der Vertrauen schafft und Ihre Position als Branchenexperte festigt.",
+        "button": {
+            "text": "Jetzt Markenreputation stärken",
+            "variant": "outlined",
+            "href": "/contact",
+            "icon": ""
+        },
+        "image": {
+            "src": "/images/video-produktion.svg",
+            "alt": "Infografik: Kamera liefert Content an Endgeräte",
+            "width": 400,
+            "height": 400
+        }
+    }
+}
