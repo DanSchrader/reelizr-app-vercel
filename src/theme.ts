@@ -33,10 +33,10 @@ export const themeOptions: ThemeOptions = {
       paper: '#0c0c0c'
     },
     primary: {
-      main: '#0c0c0c',
+      main: '#23b9c0',
     },
     secondary: {
-      main: '#0c0c0c',
+      main: '#9943a6',
     },
   },
   typography: {
@@ -53,23 +53,23 @@ export const themeOptions: ThemeOptions = {
     },
     h2: {
       fontFamily: 'Roboto ExtraBold',
-      color: '#23b9c0',
-      fontSize: '1.5rem',
+      fontSize: '2rem',
       '@media (min-width:600px)': {
-        fontSize: '2rem'
+        fontSize: '2.5rem'
       },
       [baseTheme.breakpoints.up('md')]: {
-        fontSize: '2.5rem',
+        fontSize: '3rem',
       },
     },
     h3: {
       fontFamily: 'Roboto Bold',
+      color: '#23b9c0',
       fontSize: '1rem',
       '@media (min-width:600px)': {
-        fontSize: '1.5rem'
+        fontSize: '1.2rem'
       },
       [baseTheme.breakpoints.up('md')]: {
-        fontSize: '2rem',
+        fontSize: '1.5rem',
       },
     },
     h4: {
@@ -105,18 +105,18 @@ export const themeOptions: ThemeOptions = {
     },
     subtitle1: {
       fontFamily: 'Ostrich Sans Bold',
-      color: '#23b9c0',
-      fontSize: '1.5rem',
+      color: '#9943a6',
+      fontSize: '1.2rem',
       '@media (min-width:600px)': {
-        fontSize: '2rem'
+        fontSize: '1.5rem'
       },
       [baseTheme.breakpoints.up('md')]: {
-        fontSize: '2.5rem',
+        fontSize: '2rem',
       },
     },
     subtitle2: {
       fontFamily: 'Ostrich Sans Inline Regular',
-      color: '#9943a6',
+      color: '#23b9c0',
       fontSize: '1.5rem',
       '@media (min-width:600px)': {
         fontSize: '2rem'
@@ -127,12 +127,12 @@ export const themeOptions: ThemeOptions = {
     },
     body1: {
       fontFamily: 'Roboto Regular',
-      fontSize: '1rem',
+      fontSize: '0.8rem',
       '@media (min-width:600px)': {
-        fontSize: '1.2rem'
+        fontSize: '0.9rem'
       },
       [baseTheme.breakpoints.up('md')]: {
-        fontSize: '1.5rem',
+        fontSize: '1rem',
       },
     },
     body2: {

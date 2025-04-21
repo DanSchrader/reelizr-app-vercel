@@ -5,7 +5,7 @@ import HeroSection from '@/components/HeroSection';
 
 export default function Home() {
   return (
-      <Container maxWidth='lg' component="main">
+      <Container maxWidth='lg' component="main" sx={{ py: 10 }}>
         <HeroSection/>
         <Box display="flex" justifyContent="center">
           <Image src="/images/logo-outlines.svg" alt="Reelizr-Logo Outlines" width={400} height={400}/>
@@ -14,9 +14,11 @@ export default function Home() {
           Reelizr
         </Typography>
         <Typography variant="h2" align="center" gutterBottom>
-          Markenplatzierung. Kosteneffizient. Bewegend.
+          Markenplatzierung.
         </Typography>
-        <Box display="flex" justifyContent="center">
+        <Typography variant="subtitle2" align="center" gutterBottom>
+          Kosteneffizient. Bewegend.
+        </Typography>        <Box display="flex" justifyContent="center">
           <Image src="/images/video-produktion.svg" alt="Reelizr-Logo Outlines" width={400} height={400}/>
         </Box>
       </Container>
