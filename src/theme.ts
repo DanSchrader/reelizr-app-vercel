@@ -154,7 +154,7 @@ export const themeOptions: ThemeOptions = {
       [baseTheme.breakpoints.up('md')]: {
         fontSize: '1rem',
       },
-    },    
+    },
   },
 };
 

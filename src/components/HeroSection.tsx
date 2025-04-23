@@ -27,7 +27,7 @@ export default function HeroSection(props: THeroSection) {
             <Typography variant='subtitle1' sx={{mt: '0'}}>{subtitle}</Typography>
             <Typography variant='h3' component='h2'>{heading}</Typography>
             <Typography my={2}>{description}</Typography>
-            <Button variant='outlined'>{button.text}</Button>
+            <Button variant='outlined' href={button.href}>{button.text}</Button>
         </Grid>
       </Grid>
     </Box>
