@@ -38,6 +38,9 @@ export const themeOptions: ThemeOptions = {
     secondary: {
       main: '#9943a6',
     },
+    error: {
+      main: '#cc0000',
+    },
   },
   typography: {
     fontFamily: "'Ostrich Sans Regular', 'Ostrich Sans Black', 'Ostrich Sans Bold', 'Ostrich Sans Light', 'Ostrich Sans Dashed', 'Ostrich Sans Rounded', 'Ostrich Sans Inline Regular', 'Ostrich Sans Inline Italic'",
@@ -173,7 +176,8 @@ export const themeOptions: ThemeOptions = {
             },
             "&:hover:not(.Mui-focused)": {
               "& .MuiOutlinedInput-notchedOutline": {
-                borderColor: "#fefbe4",
+                borderColor: "#9943a6",
+                borderWidth: "2px",
               },
             },
           },
@@ -184,7 +188,17 @@ export const themeOptions: ThemeOptions = {
           },
         }
       }
-    }
+    },
+    MuiFormHelperText: {
+      styleOverrides: {
+        root: {
+          color: '#cc0000',
+          fontFamily: 'Roboto Bold',
+          fontSize: "0.8rem",
+          marginTop: "0.5rem",
+        }
+      }
+    },
   },
 };
 

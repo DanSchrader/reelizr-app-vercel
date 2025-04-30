@@ -5,10 +5,9 @@ import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Input from '@mui/material/Input';
-import Typography from '@mui/material/Typography';
 import MenuItem from '@mui/material/MenuItem';
 import contactTopics from '@/utils/contactTopics';
-import contactGenders from '@/utils/contactGenders';
+import contactSalutations from '@/utils/contactSalutations';
 import { TabPanelProps } from '../types/index';
 import { SalesContactAction } from '@/app/actions';
 import { useForm } from '@conform-to/react';
@@ -60,7 +59,6 @@ export default function CustomTabPanel(props: TabPanelProps) {
                                  color: "#fefbe4"
                             }
                         }}/>
-                        <Typography>{salesFields.organisation.errors}</Typography>
                     </Grid>
                 <Grid item xs={12} sm={6}>
                     <TextField
@@ -69,7 +67,7 @@ export default function CustomTabPanel(props: TabPanelProps) {
                         select
                         variant="outlined"
                         margin="none"
-                        required
+                        defaultValue=""
                         size="small"
                         sx={{
                             "& .MuiSvgIcon-root": {
@@ -79,8 +77,8 @@ export default function CustomTabPanel(props: TabPanelProps) {
                                  color: "#fefbe4"
                              }
                         }}>
-                        {contactGenders.map((option) => (
-                            <MenuItem key={option.id} value={option.name}>
+                        {contactSalutations.map((option) => (
+                            <MenuItem key={option.id}>
                                 {option.name}
                             </MenuItem>
                         ))}
@@ -93,6 +91,7 @@ export default function CustomTabPanel(props: TabPanelProps) {
                         defaultValue={salesFields.firstName.initialValue}
                         key={salesFields.firstName.key}
                         label="Vorname"
+                        helperText={salesFields.firstName.errors}
                         variant="outlined"
                         margin="none"
                         required
@@ -103,7 +102,6 @@ export default function CustomTabPanel(props: TabPanelProps) {
                             }
                         }}
                     />
-                    <Typography sx={{color: 'red', fontSize: '0.1rem'}}>{salesFields.firstName.errors}</Typography>
                 </Grid>
                 <Grid item xs={12} sm={6}>
                     <TextField
@@ -112,6 +110,7 @@ export default function CustomTabPanel(props: TabPanelProps) {
                         defaultValue={salesFields.lastName.initialValue}
                         key={salesFields.lastName.key}
                         label="Nachname"
+                        helperText={salesFields.lastName.errors}
                         variant="outlined"
                         margin="none"
                         required
@@ -122,7 +121,6 @@ export default function CustomTabPanel(props: TabPanelProps) {
                             }
                         }}
                     />
-                    <Typography sx={{color: 'red', fontSize: '0.1rem'}}>{salesFields.lastName.errors}</Typography>
                 </Grid>
                 <Grid item xs={12} sm={6}>
                     <TextField
@@ -130,6 +128,7 @@ export default function CustomTabPanel(props: TabPanelProps) {
                         name={salesFields.email.name}
                         defaultValue={salesFields.email.initialValue}
                         label="Email"
+                        helperText={salesFields.email.errors}
                         variant="outlined"
                         margin="none"
                         required
@@ -140,7 +139,6 @@ export default function CustomTabPanel(props: TabPanelProps) {
                             }
                         }}
                     />
-                    <Typography sx={{color: 'red', fontSize: '0.1rem'}}>{salesFields.email.errors}</Typography>
                 </Grid>
                 <Grid item xs={12} sm={6}>
                     <TextField
@@ -149,7 +147,7 @@ export default function CustomTabPanel(props: TabPanelProps) {
                         select
                         variant="outlined"
                         margin="none"
-                        required
+                        defaultValue=""
                         size="small"
                         sx={{
                             "& .MuiSvgIcon-root": {
@@ -161,7 +159,7 @@ export default function CustomTabPanel(props: TabPanelProps) {
                         }}
                     >
                     {contactTopics.map((option) => (
-                        <MenuItem key={option.id} value={option.name}>
+                        <MenuItem key={option.id}>
                             {option.name}
                         </MenuItem>
                         ))}
@@ -174,6 +172,7 @@ export default function CustomTabPanel(props: TabPanelProps) {
                         defaultValue={salesFields.message.initialValue}
                         key={salesFields.message.key}
                         label="Nachricht"
+                        helperText={salesFields.message.errors}
                         variant="outlined"
                         margin="none"
                         multiline
@@ -186,7 +185,6 @@ export default function CustomTabPanel(props: TabPanelProps) {
                             }
                         }}
                     />
-                    <Typography sx={{color: 'red', fontSize: '0.1rem'}}>{salesFields.message.errors}</Typography>
                 </Grid>
                 <Grid item>
                     <Button
