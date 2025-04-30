@@ -1,8 +1,8 @@
 const pages = [
   { name: 'Services', key: 'services', href: '/services' },
-  { name: 'About us', key: 'about-us', href: '/about-us' },
+  { name: 'About', key: 'about', href: '/about' },
   { name: 'Blog', key: 'blog', href: '/blog' },
-  { name: 'Contact', key: 'contact', href: '/contact' },
+  { name: 'Kontakt', key: 'kontakt', href: '/kontakt' },
 ]
 
 export default pages;

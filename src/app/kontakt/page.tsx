@@ -1,14 +1,12 @@
+'use client';
+
 import { Container, Typography } from '@mui/material';
 import ContactFormSection from '@/components/ContactFormSection';
+import contactGenders from '@/utils/contactGenders';
 
 export default function Contact() {
 
-    const genders = [
-        { id: 1, name: 'Herr' },
-        { id: 2, name: 'Frau' },
-        { id: 3, name: 'Divers' },
-        { id: 4, name: 'Keine Angabe' },
-    ]
+    const genders = contactGenders;
 
     return (
         <Container component="main" maxWidth='md' sx={{ py: 10 }}>

@@ -156,6 +156,36 @@ export const themeOptions: ThemeOptions = {
       },
     },
   },
+  components: {
+    MuiTextField: {
+      styleOverrides: {
+        root: {
+          "& .MuiOutlinedInput-root": {
+            "& .MuiOutlinedInput-notchedOutline": {
+              borderColor: "#9943a6",
+              borderWidth: "1px",
+            },
+            "&.Mui-focused": {
+              "& .MuiOutlinedInput-notchedOutline": {
+                borderColor: "#9943a6",
+                borderWidth: "2px",
+              },
+            },
+            "&:hover:not(.Mui-focused)": {
+              "& .MuiOutlinedInput-notchedOutline": {
+                borderColor: "#fefbe4",
+              },
+            },
+          },
+          "& .MuiInputLabel-outlined": {
+            "&.Mui-focused": {
+              color: "#fefbe4",
+            },
+          },
+        }
+      }
+    }
+  },
 };
 
 export default createTheme(themeOptions);

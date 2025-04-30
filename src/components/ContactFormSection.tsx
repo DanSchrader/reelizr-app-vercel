@@ -1,136 +1,43 @@
-import { TextField, Container, Grid, MenuItem, Button } from '@mui/material';
-import contactTopics from '@/utils/contactTopics';
+'use client';
+
+import Container from '@mui/material/Container';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import Grid from '@mui/material/Grid';
+import { useState } from 'react';
+import CustomTabPanel from './CustomTabPanel';
+
+function a11yProps(index: number) {
+    return {
+      id: `tab-${index}`,
+      'aria-controls': `tabpanel-${index}`,
+    };
+  }
 
 export default function ContactFormSection() {
 
-    const genders = [
-        { id: 1, name: 'Herr' },
-        { id: 2, name: 'Frau' },
-        { id: 3, name: 'Divers' },
-        { id: 4, name: 'Keine Angabe' },
-    ]
+    const [value, setValue] = useState(0);
+
+    const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+        setValue(newValue);
+    };
 
     return (
         <Container component="main" maxWidth='md' sx={{ py: 2 }}>
-            <Grid container component='form' spacing={2}>
-            <Grid item xs={12} sm={6}>
-                    <TextField
-                        fullWidth
-                        label="Firma / Organisation"
-                        variant="outlined"
-                        margin="none"
-                        color="secondary"
-                        focused
-                        size="small"
-                    />
+            <Grid container spacing={2}>
+
+                <Grid item xs={12} sx={{ borderBottom: 1, borderColor: 'divider', justifyItems: 'center' }}>
+                    <Tabs value={value} onChange={handleChange} aria-label="department tabs">
+                        <Tab label="Sales" {...a11yProps(0)} />
+                        <Tab label="Support" {...a11yProps(1)} />
+                        <Tab label="Recruiting" {...a11yProps(2)} />
+                    </Tabs>
                 </Grid>
-                <Grid item xs={12} sm={6}>
-                    <TextField
-                        fullWidth
-                        label="Anrede"
-                        select
-                        variant="outlined"
-                        margin="none"
-                        color="primary"
-                        focused
-                        required
-                        size="small"
-                        sx={{
-                            "& .MuiSvgIcon-root": {
-                                color: "#fefbe4"
-                            }
-                        }}
-                    >
-                    {genders.map((option) => (
-                        <MenuItem key={option.id} value={option.name}>
-                            {option.name}
-                        </MenuItem>
-                        ))}
-                    </TextField>
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                    <TextField
-                        fullWidth
-                        label="Vorname"
-                        variant="outlined"
-                        margin="none"
-                        focused
-                        required
-                        size="small"
-                        color="secondary"
-                    />
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                    <TextField
-                        fullWidth
-                        label="Nachname"
-                        variant="outlined"
-                        margin="none"
-                        focused
-                        required
-                        size="small"
-                        color="primary"
-                    />
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                    <TextField
-                        fullWidth
-                        label="Email"
-                        variant="outlined"
-                        margin="none"
-                        color="secondary"
-                        focused
-                        required
-                        size="small"
-                    />
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                    <TextField
-                        fullWidth
-                        label="Bitte wählen Sie ein Thema"
-                        select
-                        variant="outlined"
-                        margin="none"
-                        color="primary"
-                        focused
-                        required
-                        size="small"
-                        sx={{
-                            "& .MuiSvgIcon-root": {
-                                color: "#fefbe4"
-                            }
-                        }}
-                    >
-                    {contactTopics.map((option) => (
-                        <MenuItem key={option.id} value={option.name}>
-                            {option.name}
-                        </MenuItem>
-                        ))}
-                    </TextField>
-                </Grid>
-                <Grid item xs={12}>
-                    <TextField
-                        fullWidth
-                        label="Nachricht"
-                        variant="outlined"
-                        margin="none"
-                        multiline
-                        rows={4}
-                        color="secondary"
-                        focused
-                        required
-                        size="small"
-                    />
-                </Grid>
-                <Grid item>
-                    <Button
-                        variant="outlined"
-                        color="primary"
-                        size="small"
-                    >
-                        Anfrage absenden
-                    </Button>
-                    </Grid>
+            
+                <CustomTabPanel value={value} index={0} />
+                <CustomTabPanel value={value} index={1} />
+                <CustomTabPanel value={value} index={2} />    
+                
             </Grid>
         </Container>
     );

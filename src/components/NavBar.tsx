@@ -54,7 +54,6 @@ function ResponsiveAppBar() {
               </Box>
             </Link>
           </Box>
-
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', sm: 'none' } }}>
             <IconButton
               size="large"
@@ -122,7 +121,6 @@ function ResponsiveAppBar() {
               </Button>
             ))}
           </Box>
-
           {/* Settings menu - Uncomment if needed -> Change Logo for mobile view flexGrow to 1 */}
 
           {/* <Box sx={{ flexGrow: 0 }}>
