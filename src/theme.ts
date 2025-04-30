@@ -43,7 +43,7 @@ export const themeOptions: ThemeOptions = {
     },
   },
   typography: {
-    fontFamily: "'Ostrich Sans Regular', 'Ostrich Sans Black', 'Ostrich Sans Bold', 'Ostrich Sans Light', 'Ostrich Sans Dashed', 'Ostrich Sans Rounded', 'Ostrich Sans Inline Regular', 'Ostrich Sans Inline Italic'",
+    fontFamily: "'Ostrich Sans Regular', 'Ostrich Sans Black', 'Ostrich Sans Bold', 'Ostrich Sans Light', 'Ostrich Sans Dashed', 'Ostrich Sans Rounded', 'Ostrich Sans Inline Regular', 'Ostrich Sans Inline Italic', 'Roboto Black', 'Roboto ExtraBold', 'Roboto Bold', 'Roboto Regular', 'Roboto Italic'",
     h1: {
       fontFamily: 'Roboto Black',
       fontSize: '2rem',
@@ -164,6 +164,7 @@ export const themeOptions: ThemeOptions = {
       styleOverrides: {
         root: {
           "& .MuiOutlinedInput-root": {
+            fontFamily: 'Roboto Regular',
             "& .MuiOutlinedInput-notchedOutline": {
               borderColor: "#9943a6",
               borderWidth: "1px",
@@ -193,11 +194,18 @@ export const themeOptions: ThemeOptions = {
       styleOverrides: {
         root: {
           color: '#cc0000',
-          fontFamily: 'Roboto Bold',
+          fontFamily: 'Roboto Italic',
           fontSize: "0.8rem",
           marginTop: "0.5rem",
         }
       }
+    },
+    MuiInputLabel: {
+      styleOverrides: {
+        root: {
+          fontFamily: 'Roboto Italic',
+        },
+      },
     },
   },
 };

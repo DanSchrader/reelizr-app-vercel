@@ -67,7 +67,6 @@ export default function CustomTabPanel(props: TabPanelProps) {
                         select
                         variant="outlined"
                         margin="none"
-                        defaultValue=""
                         size="small"
                         sx={{
                             "& .MuiSvgIcon-root": {
@@ -78,7 +77,7 @@ export default function CustomTabPanel(props: TabPanelProps) {
                              }
                         }}>
                         {contactSalutations.map((option) => (
-                            <MenuItem key={option.id}>
+                            <MenuItem key={option.id} value={option.name}>
                                 {option.name}
                             </MenuItem>
                         ))}
@@ -159,7 +158,7 @@ export default function CustomTabPanel(props: TabPanelProps) {
                         }}
                     >
                     {contactTopics.map((option) => (
-                        <MenuItem key={option.id}>
+                        <MenuItem key={option.id} value={option.name}>
                             {option.name}
                         </MenuItem>
                         ))}
