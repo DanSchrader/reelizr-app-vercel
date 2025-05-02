@@ -1,4 +1,5 @@
-import { Box, Typography, Container } from '@mui/material';
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
 
 export default function About() {
   return (
