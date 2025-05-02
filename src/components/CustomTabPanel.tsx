@@ -3,7 +3,6 @@
 import { useActionState } from 'react';
 import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
 import Input from '@mui/material/Input';
 import MenuItem from '@mui/material/MenuItem';
 import contactTopics from '@/utils/contactTopics';
@@ -13,6 +12,7 @@ import { SalesContactAction } from '@/app/actions';
 import { useForm } from '@conform-to/react';
 import { parseWithZod } from '@conform-to/zod';
 import { submissionSchema } from '@/app/zodSchema';
+import { SubmitButton } from './SubmitButton';
 
 
 export default function CustomTabPanel(props: TabPanelProps) {
@@ -153,6 +153,7 @@ export default function CustomTabPanel(props: TabPanelProps) {
                         helperText={salesFields.topic.errors}
                         label="Bitte wählen Sie ein Thema"
                         select
+                        required
                         variant="outlined"
                         margin="none"
                         size="small"
@@ -194,12 +195,7 @@ export default function CustomTabPanel(props: TabPanelProps) {
                     />
                 </Grid>
                 <Grid item>
-                    <Button
-                        variant="outlined"
-                        color="primary"
-                        size="small">
-                        Anfrage absenden
-                    </Button>
+                    <SubmitButton />
                 </Grid>
             </Grid>}
       </Grid>

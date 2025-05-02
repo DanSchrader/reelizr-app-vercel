@@ -160,6 +160,49 @@ export const themeOptions: ThemeOptions = {
     },
   },
   components: {
+    MuiOutlinedInput: {
+      styleOverrides: {
+        root: {
+          // Comprehensive autofill style neutralization
+          "&:-webkit-autofill": {
+            WebkitBoxShadow: "0 0 0 1000px #0c0c0c inset",
+            transition: "background-color 5000s ease-in-out 0s",
+            WebkitTextFillColor: "#fefbe4",
+          },
+          "& input:-webkit-autofill": {
+            WebkitBoxShadow: "0 0 0 1000px #0c0c0c inset",
+            transition: "background-color 5000s ease-in-out 0s",
+            WebkitTextFillColor: "#fefbe4",
+          },
+          "& textarea:-webkit-autofill": {
+            WebkitBoxShadow: "0 0 0 1000px #0c0c0c inset",
+            transition: "background-color 5000s ease-in-out 0s",
+            WebkitTextFillColor: "#fefbe4",
+          },
+          // For Firefox
+          "& input:-moz-autofill": {
+            background: "#0c0c0c !important",
+            color: "#fefbe4 !important",
+          },
+          // For Edge
+          "& input:-ms-autofill": {
+            background: "#0c0c0c !important",
+            color: "#fefbe4 !important",
+          },
+        },
+      },
+    },
+    // CssBaseline safety web to prevent autofill style changes
+    MuiCssBaseline: {
+      styleOverrides: {
+        "input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, textarea:-webkit-autofill, textarea:-webkit-autofill:hover, textarea:-webkit-autofill:focus, select:-webkit-autofill, select:-webkit-autofill:hover, select:-webkit-autofill:focus": {
+          WebkitBoxShadow: "0 0 0 1000px #0c0c0c inset !important",
+          WebkitTextFillColor: "#fefbe4 !important",
+          transition: "background-color 5000s ease-in-out 0s",
+          caretColor: "#fefbe4",
+        },
+      },
+    },
     MuiTextField: {
       styleOverrides: {
         root: {

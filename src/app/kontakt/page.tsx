@@ -3,7 +3,7 @@
 import { Container, Typography } from '@mui/material';
 import ContactFormSection from '@/components/ContactFormSection';
 
-export default function Contact() {
+export default function Kontakt() {
 
     return (
         <Container component="main" maxWidth='md' sx={{ py: 10 }}>

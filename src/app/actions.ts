@@ -14,7 +14,7 @@ export async function SalesContactAction (prevState: any, formData: FormData) {
         return submission.reply();
     }
     
-    const response = await fetch(process.env.SALES_CONTACT_API_URL!, {
+    const response = await fetch(process.env.SALES_CONTACT_URL!, {
         method: 'POST',
         body: formData,
     });
@@ -23,5 +23,5 @@ export async function SalesContactAction (prevState: any, formData: FormData) {
         throw new Error('Failed to submit form');
     }
 
-    return redirect('/thank-you')
+    return redirect('/anfrage-erfolgreich-gesendet');
 }
