@@ -39,6 +39,11 @@ const contactTopics = [
         name: 'Feedback',
         description: 'Verbesserungsvorschläge und Feedback',
     },
+    {
+        id: 'sonstiges',
+        name: 'Sonstiges',
+        description: 'Sie haben ein anderes Anliegen?',
+    },
 ]
 
 export default contactTopics;

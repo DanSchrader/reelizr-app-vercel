@@ -63,6 +63,10 @@ export default function CustomTabPanel(props: TabPanelProps) {
                 <Grid item xs={12} sm={6}>
                     <TextField
                         fullWidth
+                        name={salesFields.salutation.name}
+                        defaultValue={salesFields.salutation.initialValue || ""}
+                        key={salesFields.salutation.key}
+                        helperText={salesFields.salutation.errors}
                         label="Anrede"
                         select
                         variant="outlined"
@@ -126,6 +130,7 @@ export default function CustomTabPanel(props: TabPanelProps) {
                         fullWidth
                         name={salesFields.email.name}
                         defaultValue={salesFields.email.initialValue}
+                        key={salesFields.email.key}
                         label="Email"
                         helperText={salesFields.email.errors}
                         variant="outlined"
@@ -142,11 +147,14 @@ export default function CustomTabPanel(props: TabPanelProps) {
                 <Grid item xs={12} sm={6}>
                     <TextField
                         fullWidth
+                        name={salesFields.topic.name}
+                        defaultValue={salesFields.topic.initialValue || ""}
+                        key={salesFields.topic.key}
+                        helperText={salesFields.topic.errors}
                         label="Bitte wählen Sie ein Thema"
                         select
                         variant="outlined"
                         margin="none"
-                        defaultValue=""
                         size="small"
                         sx={{
                             "& .MuiSvgIcon-root": {
