@@ -1,6 +1,7 @@
 'use client';
 
-import { Container, Typography } from '@mui/material';
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
 import ContactFormSection from '@/components/ContactFormSection';
 
 export default function Kontakt() {

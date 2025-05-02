@@ -10,8 +10,12 @@ export function SubmitButton() {
     return (
         <>
         {pending ? (
-        <Button disabled variant='outlined'>
-                <CircularProgress />
+        <Button 
+            disabled
+            variant='outlined'
+            color="primary"
+            size="small">
+                <CircularProgress size='1rem' sx={{mr: 2}}/>
                 Anfrage wird gesendet
             </Button>) : (
                 <Button 
