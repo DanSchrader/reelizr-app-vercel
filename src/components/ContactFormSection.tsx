@@ -30,7 +30,7 @@ export default function ContactFormSection() {
                     <Tabs value={value} onChange={handleChange} aria-label="department tabs">
                         <Tab label="Sales" {...a11yProps(0)} />
                         <Tab label="Support" {...a11yProps(1)} />
-                        <Tab label="Recruiting" {...a11yProps(2)} />
+                        <Tab label="Karriere" {...a11yProps(2)} />
                     </Tabs>
                 </Grid>
             

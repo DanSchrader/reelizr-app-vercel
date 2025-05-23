@@ -5,18 +5,21 @@ import Grid from '@mui/material/Grid2';
 import TextField from '@mui/material/TextField';
 import Input from '@mui/material/Input';
 import MenuItem from '@mui/material/MenuItem';
-import contactTopics from '@/utils/contactTopics';
 import contactSalutations from '@/utils/contactSalutations';
-import { TabPanelProps } from '../types/index';
+import { TTabPanelProps } from '../types/index';
 import { SalesContactAction } from '@/app/actions';
 import { useForm } from '@conform-to/react';
 import { parseWithZod } from '@conform-to/zod';
 import { submissionSchema } from '@/app/zodSchema';
 import { SubmitButton } from './SubmitButton';
+import { getTopicsByDepartment, getDepartmentByIndex } from '@/utils/contactTopics';
 
 
-export default function CustomTabPanel(props: TabPanelProps) {
+export default function CustomTabPanel(props: TTabPanelProps) {
     const { children, value, index, ...other } = props;
+
+    const currentDepartment = getDepartmentByIndex(index);
+    const filteredTopics = getTopicsByDepartment(currentDepartment);
 
     const [salesResult, salesAction] = useActionState(SalesContactAction, undefined);
     const [salesForm, salesFields] = useForm({
@@ -166,7 +169,7 @@ export default function CustomTabPanel(props: TabPanelProps) {
                             }
                         }}
                     >
-                    {contactTopics.map((option) => (
+                    {filteredTopics.map((option) => (
                         <MenuItem key={option.id} value={option.name}>
                             {option.name}
                         </MenuItem>

@@ -250,6 +250,20 @@ export const themeOptions: ThemeOptions = {
         },
       },
     },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          backgroundColor: '#0c0c0c',
+          border: '1px solid #9943a6',
+          transition: "transform 0.15s ease-in-out",
+          '&:hover': {
+            transform: "scale3d(1.02, 1.02, 1)",
+            backgroundColor: '#0c0c0c',
+            border: '1.5px solid #9943a6',
+          },
+        },
+      },
+    },
   },
 };
 

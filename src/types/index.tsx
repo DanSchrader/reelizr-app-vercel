@@ -26,8 +26,23 @@ export interface THeroSection {
     image: TImage;
 }
 
-export interface TabPanelProps {
+export interface TTabPanelProps {
     children?: React.ReactNode;
     index: number;
     value: number;
+  }
+
+// Service section
+
+export interface TServiceCardProps {
+    id: string;
+    name: string;
+    description: string;
+    imgSrc: string;
+    imgAlt: string;
+    imgHeight: number;
+  }
+
+export interface TCardSectionProps {
+    services: TServiceCardProps[];
   }
