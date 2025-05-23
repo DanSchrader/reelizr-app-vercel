@@ -3,7 +3,7 @@
 import Container from '@mui/material/Container';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/Grid2';
 import { useState } from 'react';
 import CustomTabPanel from './CustomTabPanel';
 
@@ -26,7 +26,7 @@ export default function ContactFormSection() {
         <Container component="main" maxWidth='md' sx={{ py: 2 }}>
             <Grid container spacing={2}>
 
-                <Grid item xs={12} sx={{ borderBottom: 1, borderColor: 'divider', justifyItems: 'center' }}>
+                <Grid size={12} sx={{ borderBottom: 1, borderColor: 'divider', justifyItems: 'center' }}>
                     <Tabs value={value} onChange={handleChange} aria-label="department tabs">
                         <Tab label="Sales" {...a11yProps(0)} />
                         <Tab label="Support" {...a11yProps(1)} />

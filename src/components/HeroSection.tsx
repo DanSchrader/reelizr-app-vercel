@@ -1,4 +1,7 @@
-import { Box, Grid, Typography, Button } from '@mui/material';
+import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid2';
+import Typography from '@mui/material/Typography';
 import Image from 'next/image';
 import { THeroSection } from '../types/index';
 
@@ -11,12 +14,12 @@ export default function HeroSection(props: THeroSection) {
       <Grid container sx={{
         flexDirection: {xs: 'row', sm: 'row-reverse'},
       }}>
-        <Grid item xs={12} sm={6}>
+        <Grid size={{xs: 12, sm: 6}}>
             <Box display="flex" justifyContent="center">
                 <Image src={image.src} alt={image.alt} width={image.width} height={image.height}/>
             </Box>
         </Grid>
-        <Grid item xs={12} sm={6} sx={{
+        <Grid size={{xs: 12, sm: 6}} sx={{
           justifyItems: {
             xs: 'center', 
             sm: 'flex-start'},

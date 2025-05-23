@@ -1,7 +1,7 @@
 'use client';
 
 import { useActionState } from 'react';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/Grid2';
 import TextField from '@mui/material/TextField';
 import Input from '@mui/material/Input';
 import MenuItem from '@mui/material/MenuItem';
@@ -30,7 +30,7 @@ export default function CustomTabPanel(props: TabPanelProps) {
         })
   
     return (
-      <Grid item
+      <Grid
         component='form'
         action={salesAction}
         id={salesForm.id}
@@ -42,9 +42,9 @@ export default function CustomTabPanel(props: TabPanelProps) {
         {...other}>
         {value === index && 
         
-            <Grid container xs={12} spacing={2} mt={1}>
-                <Grid item xs={12} sm={6}>
-                <Input type="hidden" name="_gotcha" sx={{display: 'none'}} /> 
+            <Grid container size={12} spacing={2} mt={1}>
+                <Grid size={{xs: 12, sm: 6}}>
+                    <Input type="hidden" name="_gotcha" sx={{display: 'none'}} /> 
                     <TextField
                         fullWidth
                         name={salesFields.organisation.name}
@@ -60,7 +60,7 @@ export default function CustomTabPanel(props: TabPanelProps) {
                             }
                         }}/>
                     </Grid>
-                <Grid item xs={12} sm={6}>
+                <Grid size={{xs: 12, sm: 6}}>
                     <TextField
                         fullWidth
                         name={salesFields.salutation.name}
@@ -87,7 +87,7 @@ export default function CustomTabPanel(props: TabPanelProps) {
                         ))}
                     </TextField>
                 </Grid>
-                <Grid item xs={12} sm={6}>
+                <Grid size={{xs: 12, sm: 6}}>
                     <TextField
                         fullWidth
                         name={salesFields.firstName.name}
@@ -106,7 +106,7 @@ export default function CustomTabPanel(props: TabPanelProps) {
                         }}
                     />
                 </Grid>
-                <Grid item xs={12} sm={6}>
+                <Grid size={{xs: 12, sm: 6}}>
                     <TextField
                         fullWidth
                         name={salesFields.lastName.name}
@@ -125,7 +125,7 @@ export default function CustomTabPanel(props: TabPanelProps) {
                         }}
                     />
                 </Grid>
-                <Grid item xs={12} sm={6}>
+                <Grid size={{xs: 12, sm: 6}}>
                     <TextField
                         fullWidth
                         name={salesFields.email.name}
@@ -144,7 +144,7 @@ export default function CustomTabPanel(props: TabPanelProps) {
                         }}
                     />
                 </Grid>
-                <Grid item xs={12} sm={6}>
+                <Grid size={{xs: 12, sm: 6}}>
                     <TextField
                         fullWidth
                         name={salesFields.topic.name}
@@ -173,7 +173,7 @@ export default function CustomTabPanel(props: TabPanelProps) {
                         ))}
                     </TextField>
                 </Grid>
-                <Grid item xs={12}>
+                <Grid size={12}>
                     <TextField
                         fullWidth
                         name={salesFields.message.name}
@@ -194,7 +194,7 @@ export default function CustomTabPanel(props: TabPanelProps) {
                         }}
                     />
                 </Grid>
-                <Grid item>
+                <Grid>
                     <SubmitButton />
                 </Grid>
             </Grid>}
