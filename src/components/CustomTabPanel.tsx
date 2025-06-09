@@ -47,7 +47,7 @@ export default function CustomTabPanel(props: TTabPanelProps) {
         
             <Grid container size={12} spacing={2} mt={1}>
                 <Grid size={{xs: 12, sm: 6}}>
-                    <Input type="hidden" name="_gotcha" sx={{display: 'none'}} /> 
+                <Input type="hidden" name="_katja" sx={{display: 'none'}} /> 
                     <TextField
                         fullWidth
                         name={salesFields.organisation.name}
