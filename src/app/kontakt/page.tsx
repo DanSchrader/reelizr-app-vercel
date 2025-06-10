@@ -7,8 +7,8 @@ import ContactFormSection from '@/components/ContactFormSection';
 export default function Kontakt() {
 
     return (
-        <Container component="main" maxWidth='md' sx={{ py: 10 }}>
-            <Typography component='h1' variant='h1' textAlign='center'>Kontakt</Typography>
+        <Container component="main" maxWidth='md' sx={{ py: 12 }}>
+            <Typography component='h1' variant='h2' textAlign='center'>Kontakt</Typography>
             <ContactFormSection />
         </Container>
     );
