@@ -4,8 +4,8 @@ import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
-import theme from '../theme';
-import ResponsiveAppBar from '../components/NavBar';
+import theme from '../../theme';
+import ResponsiveAppBar from '../../components/NavBar';
 
 export const metadata: Metadata = {
   title: "Reelizr",
@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="de">
       <Box component="body">
         <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>

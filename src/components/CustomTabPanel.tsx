@@ -7,10 +7,10 @@ import Input from '@mui/material/Input';
 import MenuItem from '@mui/material/MenuItem';
 import contactSalutations from '@/utils/contactSalutations';
 import { TTabPanelProps } from '../types/index';
-import { SalesContactAction, SupportTicketAction, KarriereContactAction } from '@/app/actions';
+import { SalesContactAction, SupportTicketAction, KarriereContactAction } from '@/app/(client)/actions';
 import { useForm } from '@conform-to/react';
 import { parseWithZod } from '@conform-to/zod';
-import { submissionSchema } from '@/app/zodSchema';
+import { submissionSchema } from '@/app/(client)/zodSchema';
 import { SubmitButton } from './SubmitButton';
 import { getTopicsByDepartment, getDepartmentByIndex } from '@/utils/contactTopics';
 
