@@ -21,6 +21,7 @@ export async function SalesContactAction(prevState: any, formData: FormData) {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
+                Accept: 'application/json',
             },
             body: JSON.stringify(formsparkDataObject),
         });
@@ -55,6 +56,7 @@ export async function SupportTicketAction(prevState: any, formData: FormData) {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
+                Accept: 'application/json',
             },
             body: JSON.stringify(formsparkDataObject),
         });
@@ -89,6 +91,7 @@ export async function KarriereContactAction(prevState: any, formData: FormData) 
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
+                Accept: 'application/json',
             },
             body: JSON.stringify(formsparkDataObject),
         });
